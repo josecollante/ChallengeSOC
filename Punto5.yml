@@ -1,26 +1,29 @@
-title: #Nombre de la regla#
-id: #00000000-0000-0000-0000-000000000000#
-level: #Definir severidad de la regla |Low|Medium|Hig|# 
-author: #Quien la escribio#
-date: #Fecha de creación#
+title: Escalado de privilegios
+id: 00000000-0000-0000-0000-000000000000
+level: Medium
+author: Jose Leandro Collante
+date: 2026-05-06
 description: |
-  #Descripción de la regla#
-tags: #Tags a definir, en nuestro caso agregamos las técnicas de MITRE ATT&CK relacionadas con la regla#
-  - tag1
-  - tag2
-  - tag3
-  - tag4
-  
-status: #Status de la regla |Experimental|Stable|#
+  Detecta el uso de sudo para obtener una Terminal interactiva 
+  de root, técnica común en escalada de privilegios.
+tags: 
+  - attack.privilege_escalation
+  - attack.t1548
+  - attack.t1548.003
+status: testing
 logsource:
-  category: #Origen de datos donde se ejecuta la detección de la regla#
-detection: #Configuracion de los campos relacionados con la deteccion 
+  product: linux
+  category: auditd
+detection: 
   selection:
-    Campo1: valor1 # Nombre del campo: valor
-    Campo2: # Los valores se pueden definir como listas para agregar varios
-      - 'valor1'
-      - 'valor2'
+    CommandLine|contains: 
+      - 'sudo su'
+      - 'sudo -i'
+      - 'sudo -s'
+      - 'sudo /bin/bash'
+      - 'sudo /bin/sh'
+      - 'sudo /usr/bin/bash'
+      - 'sudo /usr/bin/sh'
   exception_1:
-    Campo3:
-      - 'valor1' 
-  condition: selection and not 1 of exception_* # Configuración de la condicion por la cual se ejecuta la regla
+    UserName: root
+  condition: selection and not 1 of exception_* 
