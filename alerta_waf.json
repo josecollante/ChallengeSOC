@@ -1,0 +1,120 @@
+{
+  "_index": "waf-2025",
+  "_id": "Iew7WZcBJazYdBMMxVge",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "timestamp": 1749548649138,
+    "formatVersion": 1,
+    "webaclId": "arn:aws:wafv2:sa-east-1:682267258985:regional/webacl/Common-ACL/b929dcca-bd61-47bc-8797-a04141fcc429",
+    "terminatingRuleId": "AWS-AWSManagedRulesCommonRuleSet",
+    "terminatingRuleType": "MANAGED_RULE_GROUP",
+    "action": "BLOCK",
+    "terminatingRuleMatchDetails": [
+      {
+        "conditionType": "REGEX",
+        "location": "HEADER",
+        "matchedData": null,
+        "matchedFieldName": ""
+      }
+    ],
+    "httpSourceName": "ALB",
+    "httpSourceId": "682267258985-app/p-applications-public-ALB/dd3262aeaceb686b",
+    "ruleGroupList": [
+      {
+        "ruleGroupId": "AWS#AWSManagedRulesAmazonIpReputationList",
+        "terminatingRule": null,
+        "nonTerminatingMatchingRules": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "excludedRules": null,
+        "customerConfig": null
+      },
+      {
+        "ruleGroupId": "AWS#AWSManagedRulesAnonymousIpList",
+        "terminatingRule": null,
+        "nonTerminatingMatchingRules": [],
+        "excludedRules": null,
+        "customerConfig": null
+      },
+      {
+        "ruleGroupId": "AWS#AWSManagedRulesKnownBadInputsRuleSet",
+        "terminatingRule": null,
+        "nonTerminatingMatchingRules": [],
+        "excludedRules": null,
+        "customerConfig": null
+      },
+      {
+        "ruleGroupId": "AWS#AWSManagedRulesSQLiRuleSet",
+        "terminatingRule": null,
+        "nonTerminatingMatchingRules": [],
+        "excludedRules": null,
+        "customerConfig": null
+      },
+      {
+        "ruleGroupId": "AWS#AWSManagedRulesCommonRuleSet",
+        "terminatingRule": {
+          "ruleId": "UserAgent_BadBots_HEADER",
+          "action": "BLOCK",
+          "ruleMatchDetails": null
+        },
+        "nonTerminatingMatchingRules": [],
+        "excludedRules": null,
+        "customerConfig": null
+      }
+    ],
+    "rateBasedRuleList": [],
+    "nonTerminatingMatchingRules": [],
+    "requestHeadersInserted": null,
+    "responseCodeSent": null,
+    "httpRequest": {
+      "clientIp": "172.202.118.17",
+      "country": "US",
+      "headers": [
+        {
+          "name": "Host",
+          "value": "52.3.99.35"
+        },
+        {
+          "name": "User-Agent",
+          "value": "Mozilla/5.0 zgrab/0.x"
+        },
+        {
+          "name": "Accept",
+          "value": "*/*"
+        },
+        {
+          "name": "Accept-Encoding",
+          "value": "gzip"
+        }
+      ],
+      "uri": "/actuator/health",
+      "args": "",
+      "httpVersion": "HTTP/1.1",
+      "httpMethod": "GET",
+      "requestId": "1-6847fe69-654494a07532809c33d6c105",
+      "fragment": "",
+      "scheme": "https",
+      "host": "52.3.99.35"
+    },
+    "labels": [
+      {
+        "name": "awswaf:managed:aws:core-rule-set:BadBots_Header"
+      }
+    ],
+    "ja3Fingerprint": "cba7f34191ef2379c1325641f6c6c4f4",
+    "ja4Fingerprint": "t12i130500_2d7513195f68_e51b7354d87f",
+    "@timestamp": "2025-06-10T09:44:09Z"
+  },
+  "fields": {
+    "@timestamp": [
+      "2025-06-10T09:44:09.000Z"
+    ]
+  },
+  "sort": [
+    1749548649000
+  ]
+}
