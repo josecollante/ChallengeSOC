@@ -17,10 +17,11 @@ def read_json_file(file_path):
     try:
         with open(file_path, 'r') as f:
             data = json.load(f)
-        if "targethash" in data:
-            return data["targethash"]
+        if "_source" in data and "targethash" in data["_source"]:
+            return data["_source"]["targethash"]
         else:
             print("No se encontro una variable de Hash en el archivo seleccionado")
+            #print(data)
             return None
     except json.JSONDecodeError:
         print("El archivo seleccionado no tiene las propiedades de un JSON.")
