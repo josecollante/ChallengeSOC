@@ -1,0 +1,29 @@
+title: Investigar
+id: 00000000-0000-0000-0000-000000000000
+level: Medium
+author: John Doe
+date: 2025-03-10
+description: |
+  Descripción de la regla
+tags:
+  - attack.t1078
+  - attack.lateral_movement
+status: Stable
+logsource:
+  category: nombre del origen de datos 
+detection:
+  selection:
+    EventID:
+      - '4624'
+      - '4625'
+    LogonType:
+      - '10'
+      - '7'
+    UserName:
+      - administrator
+      - administrador
+      - admin
+  exception_ips_habilitadas:
+    IpAddress:
+      - '10.10.10.1' 
+  condition: selection and not 1 of exception_*
