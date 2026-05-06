@@ -1,0 +1,81 @@
+{
+  "_index": "av-000001",
+  "_id": "EkqbWpcBkYaMbfsqFB6N",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "tenantguid": "3FA5159E-02A3-4086-AA7A-437F9E122261",
+    "firstattemptedaction": "IDS_ALERT_ACT_TAK_WBD",
+    "analyzerhostname": "ARD74FGK3",
+    "analyzerdatversion": "5916.0",
+    "sourceprocessname": "Análisis bajo demanda",
+    "analyzerversion": "10.7.18.10854",
+    "agentguid": "a0cadbb4-e125-11ec-3cd5-a02919b7bc97",
+    "sourceipv4": "10.54.21.64",
+    "taskname": "IDS_ODS_TASK_NAME_FULL_SCAN",
+    "amcorecontentversion": "5916.0",
+    "sourceipv6": "/0:0:0:0:0:ffff:a36:1540",
+    "threattype": "app",
+    "detectedutc": "1749571665000",
+    "targethostname": "ARD74FGK3",
+    "sourcehostname": "ARD74FGK3",
+    "targetfilename": "C:\\$Recycle.Bin\\S-1-5-21-1748953664-3518455533-2714477346-29890\\$RSUDZXG.zip\\ngrok.exe",
+    "threateventid": "1025",
+    "analyzername": "Trellix Endpoint Security",
+    "targetfilesize": "9726537",
+    "targetipv4": "10.54.21.64",
+    "targethash": "9aa49ee0c47673a678550d82a2bdfb15",
+    "targetusername": "AR\\ARD74FGK3$",
+    "analyzerengineversion": "6800.10657",
+    "threatactiontaken": "IDS_ALERT_ACT_TAK_DEL",
+    "analyzerdetectionmethod": "On-Demand Scan",
+    "firstactionstatus": "true",
+    "receivedutc": "2025-06-10T16:09:29.765Z",
+    "threatseverity": "2",
+    "analyzer": "ENDP_AM_1070",
+    "analyzercontentcreationdate": "1749540480000",
+    "analyzeripv6": "/0:0:0:0:0:ffff:a36:1540",
+    "nodepath": "1\\2457826\\2835823\\2857758\\3453473\\3453492",
+    "bladename": "IDS_BLADE_NAME_SPB",
+    "threatname": "PUP-Ngrok.a",
+    "targetipv6": "/0:0:0:0:0:ffff:a36:1540",
+    "threatcategory": "av.detect",
+    "targetcreatetime": "1747419865000",
+    "threatdetectedoncreation": "false",
+    "analyzeripv4": "10.54.21.64",
+    "targetname": "ngrok.exe",
+    "analyzergtiquery": "false",
+    "eventtimelocal": "1749571665000",
+    "naturallangdescription": "IDS_NATURAL_LANG_ODS_DETECTION_DELETED|TargetName=ngrok.exe|TargetPath=C:\\$Recycle.Bin\\S-1-5-21-1748953664-3518455533-2714477346-29890\\$RSUDZXG.zip|ThreatName=PUP-Ngrok.a|ThreatType=app|TaskName=IDS_ODS_TASK_NAME_FULL_SCAN|TargetUserName=AR\\ARD74FGK3$",
+    "targetaccesstime": "1747421950000",
+    "targetpath": "C:\\$Recycle.Bin\\S-1-5-21-1748953664-3518455533-2714477346-29890\\$RSUDZXG.zip",
+    "durationbeforedetection": "2151796",
+    "tenantid": "21914",
+    "secondattemptedaction": "IDS_NOTAPPLICABLE",
+    "attackvectortype": "4",
+    "threathandled": "true",
+    "console": "epocloud",
+    "autoguid": "4ae96e0c-13e4-4d2b-9dfc-74d413c9a0d2",
+    "@version": "1",
+    "@timestamp": "2025-06-10T16:10:02.147044924Z",
+    "targetmodifytime": "1747419869000",
+    "cleanable": "true",
+    "analyzermac": "ac74b19ce1ea"
+  },
+  "fields": {
+    "receivedutc": [
+      "2025-06-10T16:09:29.765Z"
+    ],
+    "@timestamp": [
+      "2025-06-10T16:10:02.147Z"
+    ]
+  },
+  "highlight": {
+    "targethash": [
+      "@opensearch-dashboards-highlighted-field@9aa49ee0c47673a678550d82a2bdfb15@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1749571802147
+  ]
+}
