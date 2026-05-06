@@ -13,7 +13,7 @@ def select_file():
     if not files:
         print("En el directorio actual NO hay archivos para seleccionar.")
         return None
-    menu = TerminalMenu(files, title="Seleccione un archivo . JSON:")
+    menu = TerminalMenu(files, title="Seleccione un archivo .JSON:")
     index_menu = menu.show()
     if index_menu is None:
         return None
@@ -78,7 +78,7 @@ def check_results (virus_total_data, hash_value):
         else:
             print("\nDEFINICIÓN: El HASH del archivo escaneado no muestra indicios de ser malicioso.\n")
         Link = f"https://www.virustotal.com/gui/file/{hash_value}/detection"
-        print(f"Para más detalles, puede consultar el siguiente enlace: {Link}")
+        print(f"Para más detalles, puede consultar el siguiente enlace:\n {Link}\n\n")
         
     except Exception as e:
         print(f"Ocurrió un error al procesar los resultados de VirusTotal: {e}")
