@@ -1,0 +1,26 @@
+title: #Nombre de la regla#
+id: #00000000-0000-0000-0000-000000000000#
+level: #Definir severidad de la regla |Low|Medium|Hig|# 
+author: #Quien la escribio#
+date: #Fecha de creación#
+description: |
+  #Descripción de la regla#
+tags: #Tags a definir, en nuestro caso agregamos las técnicas de MITRE ATT&CK relacionadas con la regla#
+  - tag1
+  - tag2
+  - tag3
+  - tag4
+  
+status: #Status de la regla |Experimental|Stable|#
+logsource:
+  category: #Origen de datos donde se ejecuta la detección de la regla#
+detection: #Configuracion de los campos relacionados con la deteccion 
+  selection:
+    Campo1: valor1 # Nombre del campo: valor
+    Campo2: # Los valores se pueden definir como listas para agregar varios
+      - 'valor1'
+      - 'valor2'
+  exception_1:
+    Campo3:
+      - 'valor1' 
+  condition: selection and not 1 of exception_* # Configuración de la condicion por la cual se ejecuta la regla
