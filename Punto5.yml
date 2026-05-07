@@ -20,6 +20,8 @@ detection:
       - 'sudo su'
       - 'sudo -i'
       - 'sudo -s'
+      - 'sudo -u'
+      - 'sudo -l'
       - 'sudo /bin/bash'
       - 'sudo /bin/sh'
       - 'sudo /usr/bin/bash'
